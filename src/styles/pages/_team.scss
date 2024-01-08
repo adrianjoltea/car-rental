@@ -1,0 +1,47 @@
+@import "../base/colors.scss";
+@import "../components/button";
+@import "../layout/form.scss";
+@import "../base/typography.scss";
+@import "../components/hero-secondary.scss";
+@import "../components/book-banner.scss";
+@import "../components/footer.scss";
+
+.team {
+  max-width: 133rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-block: 10rem;
+  gap: 10rem;
+  @media (max-width: 1250px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    img {
+      background-color: $slate-100;
+      @media (max-width: 400px) {
+        width: 50%;
+      }
+    }
+    &-text {
+      text-align: center;
+      margin-bottom: 5rem;
+      h2 {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+}

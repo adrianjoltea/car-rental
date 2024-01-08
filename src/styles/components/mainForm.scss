@@ -1,0 +1,190 @@
+.overlay {
+  position: fixed;
+  inset: 0px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-body {
+  width: 100rem;
+  margin: 10rem auto 0;
+  background-color: rgba($gray-50, 0.9);
+  padding: 2rem;
+  height: 70rem;
+  overflow: scroll;
+  position: relative;
+  z-index: 999999;
+  border: 1px solid $gray-300;
+  @media (max-width: 1000px) {
+    width: 100%;
+    height: 100%;
+    background-color: $gray-50;
+    margin: 0;
+  }
+}
+
+.modal-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  align-items: center;
+  background-color: $red-600;
+  color: white;
+  padding: 0 3rem;
+  @media (max-width: 1000px) {
+    font-size: 1.5rem;
+  }
+}
+.modal-info {
+  background-color: rgba($orange-400, 0.2);
+  padding: 3rem;
+  h3 {
+    font-size: 3rem;
+    color: $red-600;
+    margin-bottom: 2rem;
+    @media (max-width: 1000px) {
+      font-size: 1.5rem;
+    }
+  }
+  p {
+    font-size: 2rem;
+    @media (max-width: 1000px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.modal-car-selected-body {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+  }
+  &-info {
+    @media (max-width: 1000px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h4 {
+      color: $orange-400;
+      font-size: 2rem;
+    }
+    &-child {
+      display: flex;
+      gap: 2rem;
+      margin-block: 2rem;
+      &-marker {
+        font-size: 3rem;
+      }
+      &-text {
+        span {
+          font-size: 2rem;
+          @media (max-width: 1000px) {
+            font-size: 1rem;
+          }
+        }
+        p {
+          font-size: 2rem;
+          @media (max-width: 1000px) {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  &-car {
+    img {
+      @media (max-width: 1000px) {
+        width: 50%;
+      }
+    }
+    @media (max-width: 1000px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-title {
+      display: flex;
+      gap: 1rem;
+      font-size: 2rem;
+      span {
+        color: $orange-400;
+      }
+    }
+  }
+}
+
+.modal-form {
+  padding: 1rem;
+  @media (max-width: 1000px) {
+    text-align: center;
+  }
+  h3 {
+    color: $color-orage-500;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  &-info {
+    &-checkbox {
+      display: flex;
+      gap: 2rem;
+      font-size: 2rem;
+      color: $gray-600;
+      input {
+        width: 1.6rem;
+      }
+    }
+
+    &-btn {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 2rem;
+    }
+
+    &-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      @media (max-width: 1000px) {
+        grid-template-columns: 1fr;
+      }
+      &-child {
+        display: grid;
+        margin-bottom: 4rem;
+        margin-right: 2rem;
+        label {
+          font-size: 2rem;
+          color: $gray-600;
+          gap: 0.5rem;
+        }
+        input {
+          padding: 1.5rem;
+          outline: none;
+          border: none;
+          background-color: $gray-300;
+        }
+      }
+    }
+    &-1col {
+      display: grid;
+      &-child {
+        display: grid;
+        margin-bottom: 4rem;
+        margin-right: 2rem;
+        label {
+          font-size: 2rem;
+          color: $gray-600;
+          gap: 0.5rem;
+        }
+        input {
+          padding: 1.5rem;
+          outline: none;
+          border: none;
+          background-color: $gray-300;
+        }
+      }
+    }
+  }
+}

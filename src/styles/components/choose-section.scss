@@ -1,0 +1,104 @@
+.choose-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rem;
+  padding: 2rem;
+  gap: 2rem;
+  @media (max-width: 1000px) {
+    gap: 2rem;
+  }
+  img {
+    max-width: 130rem;
+    width: 100%;
+
+    @media (max-width: 1100px) {
+      width: 75%;
+    }
+  }
+  &-container {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 130rem;
+    width: 100%;
+    gap: 3rem;
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      width: 40%;
+      @media (max-width: 1000px) {
+        width: 75%;
+        text-align: center;
+      }
+      h2 {
+        font-size: 4rem;
+        font-weight: 800;
+      }
+      h3 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.5rem;
+        color: $slate-500;
+        word-spacing: 0.3rem;
+        line-height: 1.4;
+      }
+      a {
+        padding: 2rem;
+        background-color: $orange-500;
+        width: fit-content;
+        text-decoration: none;
+        color: $slate-50;
+        font-size: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        border-radius: 0.5rem;
+      }
+    }
+    &-3cols {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      width: 35%;
+      @media (max-width: 1000px) {
+        width: 75%;
+        text-align: center;
+      }
+      &-1col {
+        display: flex;
+        gap: 1rem;
+        @media (max-width: 1000px) {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        img {
+          width: 11rem;
+        }
+        &-text {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          h3 {
+            font-size: 2rem;
+            font-weight: 900;
+          }
+          p {
+            font-size: 1.5rem;
+            color: $slate-600;
+          }
+        }
+      }
+    }
+  }
+}

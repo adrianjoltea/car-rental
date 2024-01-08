@@ -1,0 +1,86 @@
+.pick-section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  margin-bottom: 30rem;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+  &-cars {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    @media (max-width: 1000px) {
+      width: 100%;
+      text-align: center;
+    }
+    &-car {
+      padding: 2rem;
+      font-weight: 600;
+      transition: all 0.5s;
+      font-size: 2rem;
+      background-color: $slate-200;
+    }
+  }
+  &-image {
+    max-width: 50rem;
+    aspect-ratio: 2/1;
+    @media (max-width: 1000px) {
+      margin-bottom: 7rem;
+    }
+    img {
+      width: 100%;
+      margin-top: 5rem;
+    }
+  }
+  &-details {
+    display: flex;
+    flex-direction: column;
+    // height: 100%;
+    // gap: 2rem;
+    &-button {
+      padding: 2rem;
+      text-align: center;
+      background-color: $orange-500;
+      a {
+        text-decoration: none;
+        color: $slate-100;
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+    }
+
+    &-price {
+      padding: 1.5rem;
+      color: $slate-100;
+      font-size: 2.5rem;
+      background-color: $orange-500;
+    }
+    &-specs {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border: 0.3rem solid $slate-400;
+
+      &-col {
+        padding: 1rem;
+        max-width: 50rem;
+        display: flex;
+        border-bottom: 0.3rem solid $slate-400;
+        span {
+          font-size: 1.5rem;
+          width: 50%;
+          text-align: center;
+          &:nth-child(1) {
+            border-right: 0.3rem solid $slate-400;
+          }
+        }
+      }
+    }
+  }
+}
+.active {
+  background-color: $orange-400;
+}

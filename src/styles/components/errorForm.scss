@@ -1,0 +1,9 @@
+@import "../base/colors.scss";
+
+.error-form {
+  color: $red-400;
+  font-size: 2rem;
+  @media (max-width: 1000px) {
+    font-size: 3rem;
+  }
+}

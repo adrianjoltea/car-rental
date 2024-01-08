@@ -1,0 +1,38 @@
+.homeplan-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 10rem;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+  &-child {
+    max-width: 40rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    place-items: center;
+    text-align: center;
+    padding: 0.5rem;
+
+    img {
+      width: 50%;
+    }
+    h2 {
+      font-size: 2.5rem;
+      @media (max-width: 1000px) {
+        font-size: 2rem;
+      }
+    }
+    p {
+      font-size: 2rem;
+      padding: 1rem;
+      color: $slate-600;
+      @media (max-width: 1000px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

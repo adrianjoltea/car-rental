@@ -1,0 +1,13 @@
+.banner-section {
+  background-color: $stone-900;
+  padding: 5rem;
+  margin-bottom: 10rem;
+  &-title {
+    margin: 0;
+    color: $slate-100;
+    font-weight: bolder;
+    span {
+      color: $orange-400;
+    }
+  }
+}

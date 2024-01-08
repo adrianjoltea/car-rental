@@ -1,0 +1,38 @@
+@import "../base/colors";
+
+.main-btn {
+  padding: 2rem;
+  font-size: 2rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+.btn-color-orange {
+  background-color: $orange-600;
+  color: $slate-50;
+  box-shadow: $orange-600 0px 2px 9px 0px;
+
+  &:hover {
+    background-color: $orange-700;
+  }
+}
+.btn-color-black {
+  background-color: $stone-900;
+  color: $slate-50;
+  box-shadow: $stone-600 0px 2px 9px 0px;
+  &:hover {
+    background-color: $slate-50;
+    color: $stone-900;
+  }
+}
+.btn-form {
+  align-self: self-end;
+}

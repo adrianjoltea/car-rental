@@ -1,0 +1,24 @@
+@import "../base/colors.scss";
+
+.title-center {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 2rem;
+  // margin-block: 20rem;
+  margin: 20rem 0 10rem;
+  h2 {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  p {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    color: $slate-600;
+  }
+}

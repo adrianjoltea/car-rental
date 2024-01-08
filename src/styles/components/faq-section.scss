@@ -1,0 +1,54 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10rem;
+
+  &-container {
+    border: 0.1rem solid $slate-200;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 80rem;
+    position: relative;
+    transition: all 0.5s;
+    @media (max-width: 1000px) {
+      max-width: 80rem;
+      width: 100%;
+    }
+
+    &-question {
+      transition: all 0.5s;
+      cursor: pointer;
+      padding: 2rem;
+    }
+    h3 {
+      display: flex;
+      justify-content: space-between;
+      font-size: 2rem;
+    }
+    &-text {
+      padding: 2rem;
+      font-size: 1.7rem;
+      transition: all 1s;
+      overflow: hidden;
+      // height: 20rem;
+      color: $slate-600;
+      transition: all 1s;
+
+      p {
+        // position: absolute;
+        // top: -100%;
+      }
+    }
+  }
+}
+
+.open-color {
+  background-color: $orange-500;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: $slate-50;
+}
+// .open {
+//   bottom: -100%;
+// }

@@ -1,0 +1,44 @@
+.book-banner {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($slate-900, 0.801),
+      rgba($slate-700, 0.803)
+    ),
+    url("/src/images/banners/book-banner.png");
+  margin-block: 10rem;
+  display: flex;
+  height: 20rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  &-container {
+    // max-width: 133rem;
+    // margin: 0 auto;
+    &-text {
+      color: $gray-50;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      @media (max-width: 1000px) {
+        flex-direction: column;
+        text-align: center;
+      }
+      h2 {
+        font-size: 3rem;
+        @media (max-width: 1000px) {
+          font-size: 2rem;
+        }
+      }
+      span {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: $orange-600;
+        font-size: 3rem;
+        @media (max-width: 1000px) {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
