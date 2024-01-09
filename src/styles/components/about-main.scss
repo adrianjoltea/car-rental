@@ -26,6 +26,9 @@
       gap: 2rem;
       max-width: 43rem;
 
+      @media (max-width: 500px) {
+        margin: 2rem;
+      }
       &-flex {
         margin-top: 3rem;
         display: grid;

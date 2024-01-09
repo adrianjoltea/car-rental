@@ -5,7 +5,6 @@ function Hero() {
     <section className="hero">
       <TitleHero>
         <h2>About</h2>
-        <p>About section</p>
       </TitleHero>
     </section>
   );

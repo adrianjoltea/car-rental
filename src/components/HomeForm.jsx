@@ -44,7 +44,6 @@ function HomeForm() {
         <div className="form-body-container">
           <div className="form-body-container-text">
             <h2>Book a car</h2>
-            {errors && <p>ERROR</p>}
           </div>
           <form
             className="form-body-container-grid"
@@ -132,7 +131,9 @@ function HomeForm() {
                 type="date"
               ></input>
             </div>
-            <Button style={"main-btn btn-color-orange btn-form"}>Search</Button>
+            <Button style={"main-btn btn-color-orange btn-form main-btn-width"}>
+              Search
+            </Button>
           </form>
         </div>
       </section>

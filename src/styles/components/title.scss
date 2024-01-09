@@ -7,6 +7,10 @@
   gap: 2rem;
   // margin-block: 20rem;
   margin: 20rem 0 10rem;
+  @media (max-width: 1000px) {
+    margin: 5rem 2rem;
+  }
+
   h2 {
     font-size: 4rem;
     font-weight: bold;

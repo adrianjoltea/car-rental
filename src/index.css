@@ -59,6 +59,12 @@ body {
     @media (max-width: 1200px) {
       .main-nav-logo {
         font-size: 2rem; } }
+    @media (max-width: 1000px) {
+      .main-nav-logo {
+        margin: 0;
+        position: absolute;
+        top: 1.75rem;
+        left: 1rem; } }
   .main-nav ul {
     display: flex;
     gap: 2rem;
@@ -83,7 +89,8 @@ body {
   font-size: 3rem;
   color: #0f172a;
   display: none;
-  z-index: 20; }
+  z-index: 20;
+  text-decoration: none; }
 
 @media (max-width: 1000px) {
   .toggle-mobile {
@@ -123,6 +130,9 @@ body {
     background-color: #f8fafc; }
     @media (max-width: 1000px) {
       .form-body-container {
+        width: 80%; } }
+    @media (max-width: 400px) {
+      .form-body-container {
         width: 100%; } }
     @media (max-width: 1300px) {
       .form-body-container {
@@ -147,7 +157,8 @@ body {
           display: block; } }
       .form-body-container-grid-child {
         display: flex;
-        flex-direction: column; }
+        flex-direction: column;
+        margin-top: 2rem; }
         .form-body-container-grid-child label {
           align-items: center;
           display: flex;
@@ -169,7 +180,7 @@ body {
         .form-body-container-grid-child input {
           border: 1px solid #e2e8f0;
           outline: none;
-          padding-right: 3rem;
+          padding: 1.2rem 1.3rem;
           height: 100%;
           color: #334155; }
           @media (max-width: 1000px) {
@@ -335,6 +346,9 @@ body {
   text-align: center;
   gap: 2rem;
   margin: 20rem 0 10rem; }
+  @media (max-width: 1000px) {
+    .title-center {
+      margin: 5rem 2rem; } }
   .title-center h2 {
     font-size: 4rem;
     font-weight: bold; }
@@ -388,14 +402,15 @@ body {
   margin-bottom: 30rem; }
   @media (max-width: 1000px) {
     .pick-section-container {
-      flex-direction: column; } }
+      flex-direction: column;
+      margin-bottom: 5rem; } }
   .pick-section-container-cars {
     display: flex;
     flex-direction: column;
     gap: 1rem; }
     @media (max-width: 1000px) {
       .pick-section-container-cars {
-        width: 100%;
+        width: 80%;
         text-align: center; } }
     .pick-section-container-cars-car {
       padding: 2rem;
@@ -510,7 +525,6 @@ body {
       .choose-section-container-text a {
         padding: 2rem;
         background-color: #f97316;
-        width: fit-content;
         text-decoration: none;
         color: #f8fafc;
         font-size: 2rem;
@@ -569,6 +583,10 @@ body {
       flex-direction: column;
       gap: 2rem;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; }
+      @media (max-width: 500px) {
+        .testimonials-box-container {
+          width: 90%;
+          margin: 0 auto; } }
       .testimonials-box-container p {
         font-size: 2.2rem;
         font-weight: 500; }
@@ -605,6 +623,10 @@ body {
       .faq-container {
         max-width: 80rem;
         width: 100%; } }
+    @media (max-width: 500px) {
+      .faq-container {
+        margin: 0 auto;
+        width: 80%; } }
     .faq-container-question {
       transition: all 0.5s;
       cursor: pointer;
@@ -714,9 +736,10 @@ body {
       font-weight: 400;
       line-height: 2.6rem;
       border: 1px solid transparent;
-      padding: 1rem 6rem;
+      padding: 1rem;
       outline: none;
-      background-color: #e5e7eb; }
+      background-color: #e5e7eb;
+      width: 100%; }
       @media (max-width: 1000px) {
         .footer-content li input {
           padding: 1rem; } }
@@ -732,7 +755,8 @@ body {
   transition: all 0.3s;
   border: 2px solid #ff4d30;
   font-size: 1.6rem;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 100%; }
   .submit-email:hover {
     box-shadow: 0 10px 15px 0 #ff5330;
     background-color: #fa4226; }
@@ -767,6 +791,10 @@ body {
 
 .btn-form {
   align-self: self-end; }
+
+.main-btn-width {
+  width: 100%;
+  margin-top: 2rem; }
 
 .error-form {
   color: #f87171;
@@ -881,6 +909,10 @@ body {
 .btn-form {
   align-self: self-end; }
 
+.main-btn-width {
+  width: 100%;
+  margin-top: 2rem; }
+
 .hero {
   width: 100%;
   height: 41rem;
@@ -901,6 +933,9 @@ body {
     font-size: 4rem; }
   .title-hero p {
     font-size: 2rem; }
+  @media (max-width: 1300px) {
+    .title-hero {
+      margin-left: 2rem; } }
 
 .about {
   margin-block: 10rem;
@@ -927,6 +962,9 @@ body {
       flex-direction: column;
       gap: 2rem;
       max-width: 43rem; }
+      @media (max-width: 500px) {
+        .about-container-text {
+          margin: 2rem; } }
       .about-container-text-flex {
         margin-top: 3rem;
         display: grid;
@@ -969,6 +1007,9 @@ body {
   width: 100%;
   justify-content: center;
   align-items: center; }
+  @media (max-width: 1000px) {
+    .book-banner {
+      margin-block: 2rem; } }
   .book-banner-container-text {
     color: #f9fafb;
     display: flex;
@@ -1034,9 +1075,10 @@ body {
       font-weight: 400;
       line-height: 2.6rem;
       border: 1px solid transparent;
-      padding: 1rem 6rem;
+      padding: 1rem;
       outline: none;
-      background-color: #e5e7eb; }
+      background-color: #e5e7eb;
+      width: 100%; }
       @media (max-width: 1000px) {
         .footer-content li input {
           padding: 1rem; } }
@@ -1052,7 +1094,8 @@ body {
   transition: all 0.3s;
   border: 2px solid #ff4d30;
   font-size: 1.6rem;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 100%; }
   .submit-email:hover {
     box-shadow: 0 10px 15px 0 #ff5330;
     background-color: #fa4226; }
@@ -1088,6 +1131,10 @@ body {
 .btn-form {
   align-self: self-end; }
 
+.main-btn-width {
+  width: 100%;
+  margin-top: 2rem; }
+
 .hero {
   width: 100%;
   height: 41rem;
@@ -1108,6 +1155,9 @@ body {
     font-size: 4rem; }
   .title-hero p {
     font-size: 2rem; }
+  @media (max-width: 1300px) {
+    .title-hero {
+      margin-left: 2rem; } }
 
 .models-container {
   max-width: 133rem;
@@ -1129,7 +1179,8 @@ body {
   width: 35rem;
   display: flex;
   flex-direction: column;
-  border: 1px solid #94a3b8; }
+  border: 1px solid #94a3b8;
+  background-color: white; }
   .model-car img {
     margin: 0 auto;
     max-width: 30rem;
@@ -1178,6 +1229,9 @@ body {
   width: 100%;
   justify-content: center;
   align-items: center; }
+  @media (max-width: 1000px) {
+    .book-banner {
+      margin-block: 2rem; } }
   .book-banner-container-text {
     color: #f9fafb;
     display: flex;
@@ -1243,9 +1297,10 @@ body {
       font-weight: 400;
       line-height: 2.6rem;
       border: 1px solid transparent;
-      padding: 1rem 6rem;
+      padding: 1rem;
       outline: none;
-      background-color: #e5e7eb; }
+      background-color: #e5e7eb;
+      width: 100%; }
       @media (max-width: 1000px) {
         .footer-content li input {
           padding: 1rem; } }
@@ -1261,7 +1316,8 @@ body {
   transition: all 0.3s;
   border: 2px solid #ff4d30;
   font-size: 1.6rem;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 100%; }
   .submit-email:hover {
     box-shadow: 0 10px 15px 0 #ff5330;
     background-color: #fa4226; }
@@ -1297,6 +1353,10 @@ body {
 .btn-form {
   align-self: self-end; }
 
+.main-btn-width {
+  width: 100%;
+  margin-top: 2rem; }
+
 .hero {
   width: 100%;
   height: 41rem;
@@ -1317,6 +1377,9 @@ body {
     font-size: 4rem; }
   .title-hero p {
     font-size: 2rem; }
+  @media (max-width: 1300px) {
+    .title-hero {
+      margin-left: 2rem; } }
 
 .book-banner {
   background-image: linear-gradient(to right bottom, rgba(15, 23, 42, 0.801), rgba(51, 65, 85, 0.803)), url("/src/images/banners/book-banner.png");
@@ -1326,6 +1389,9 @@ body {
   width: 100%;
   justify-content: center;
   align-items: center; }
+  @media (max-width: 1000px) {
+    .book-banner {
+      margin-block: 2rem; } }
   .book-banner-container-text {
     color: #f9fafb;
     display: flex;
@@ -1391,9 +1457,10 @@ body {
       font-weight: 400;
       line-height: 2.6rem;
       border: 1px solid transparent;
-      padding: 1rem 6rem;
+      padding: 1rem;
       outline: none;
-      background-color: #e5e7eb; }
+      background-color: #e5e7eb;
+      width: 100%; }
       @media (max-width: 1000px) {
         .footer-content li input {
           padding: 1rem; } }
@@ -1409,7 +1476,8 @@ body {
   transition: all 0.3s;
   border: 2px solid #ff4d30;
   font-size: 1.6rem;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 100%; }
   .submit-email:hover {
     box-shadow: 0 10px 15px 0 #ff5330;
     background-color: #fa4226; }
@@ -1435,6 +1503,12 @@ body {
     align-items: center;
     gap: 2rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
+    @media (max-width: 1200px) {
+      .team-container {
+        margin: 0 auto; } }
+    @media (max-width: 400px) {
+      .team-container {
+        width: 70%; } }
     .team-container img {
       background-color: #f1f5f9; }
       @media (max-width: 400px) {
@@ -1479,6 +1553,10 @@ body {
 .btn-form {
   align-self: self-end; }
 
+.main-btn-width {
+  width: 100%;
+  margin-top: 2rem; }
+
 .hero {
   width: 100%;
   height: 41rem;
@@ -1499,6 +1577,9 @@ body {
     font-size: 4rem; }
   .title-hero p {
     font-size: 2rem; }
+  @media (max-width: 1300px) {
+    .title-hero {
+      margin-left: 2rem; } }
 
 .book-banner {
   background-image: linear-gradient(to right bottom, rgba(15, 23, 42, 0.801), rgba(51, 65, 85, 0.803)), url("/src/images/banners/book-banner.png");
@@ -1508,6 +1589,9 @@ body {
   width: 100%;
   justify-content: center;
   align-items: center; }
+  @media (max-width: 1000px) {
+    .book-banner {
+      margin-block: 2rem; } }
   .book-banner-container-text {
     color: #f9fafb;
     display: flex;
@@ -1573,9 +1657,10 @@ body {
       font-weight: 400;
       line-height: 2.6rem;
       border: 1px solid transparent;
-      padding: 1rem 6rem;
+      padding: 1rem;
       outline: none;
-      background-color: #e5e7eb; }
+      background-color: #e5e7eb;
+      width: 100%; }
       @media (max-width: 1000px) {
         .footer-content li input {
           padding: 1rem; } }
@@ -1591,7 +1676,8 @@ body {
   transition: all 0.3s;
   border: 2px solid #ff4d30;
   font-size: 1.6rem;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 100%; }
   .submit-email:hover {
     box-shadow: 0 10px 15px 0 #ff5330;
     background-color: #fa4226; }

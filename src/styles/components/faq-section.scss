@@ -16,6 +16,10 @@
       max-width: 80rem;
       width: 100%;
     }
+    @media (max-width: 500px) {
+      margin: 0 auto;
+      width: 80%;
+    }
 
     &-question {
       transition: all 0.5s;

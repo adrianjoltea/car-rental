@@ -5,7 +5,6 @@ function HeroVehicleModels() {
     <section className="hero">
       <TitleHero>
         <h2>Vehicle Models</h2>
-        <p>Vehicle Models section</p>
       </TitleHero>
     </section>
   );

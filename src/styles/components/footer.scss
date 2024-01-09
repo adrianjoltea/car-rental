@@ -45,9 +45,10 @@
       font-weight: 400;
       line-height: 2.6rem;
       border: 1px solid transparent;
-      padding: 1rem 6rem;
+      padding: 1rem;
       outline: none;
       background-color: $gray-200;
+      width: 100%;
       @media (max-width: 1000px) {
         padding: 1rem;
       }
@@ -67,7 +68,7 @@
   font-size: 1.6rem;
   // width: fit-content;
   cursor: pointer;
-  // width: 100%;
+  width: 100%;
 
   &:hover {
     box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 40%);

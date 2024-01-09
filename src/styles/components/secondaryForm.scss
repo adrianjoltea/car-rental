@@ -11,6 +11,9 @@
     padding: 3rem;
     background-color: $slate-50;
     @media (max-width: 1000px) {
+      width: 80%;
+    }
+    @media (max-width: 400px) {
       width: 100%;
     }
 
@@ -43,6 +46,7 @@
       &-child {
         display: flex;
         flex-direction: column;
+        margin-top: 2rem;
         label {
           align-items: center;
           display: flex;
@@ -69,7 +73,7 @@
         input {
           border: 1px solid $slate-200;
           outline: none;
-          padding-right: 3rem;
+          padding: 1.2rem 1.3rem;
           height: 100%;
           color: $slate-700;
           @media (max-width: 1000px) {

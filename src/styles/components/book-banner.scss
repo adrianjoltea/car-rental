@@ -11,6 +11,9 @@
   width: 100%;
   justify-content: center;
   align-items: center;
+  @media (max-width: 1000px) {
+    margin-block: 2rem;
+  }
   &-container {
     // max-width: 133rem;
     // margin: 0 auto;

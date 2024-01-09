@@ -2,13 +2,17 @@ import { Link, Outlet } from "react-router-dom";
 import { FaCarSide } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function AppLayout() {
   const [navOpen, setNavOpen] = useState(false);
 
   function handleShow() {
     setNavOpen(nav => !nav);
+  }
+
+  function handleLink() {
+    setNavOpen(false);
   }
 
   return (
@@ -69,36 +73,48 @@ function AppLayout() {
       <nav className="main-nav">
         <label className="main-nav-logo">Car Rental</label>
         <a href="#" onClick={handleShow} className="toggle-mobile">
-          <GiHamburgerMenu />
+          {navOpen ? "X" : <GiHamburgerMenu />}
         </a>
         <ul className={navOpen ? "active" : ""}>
           <li>
-            <Link to="/" className="main-nav-ul-text">
+            <Link to="/" className="main-nav-ul-text" onClick={handleLink}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/about" className="main-nav-ul-text">
+            <Link to="/about" className="main-nav-ul-text" onClick={handleLink}>
               About
             </Link>
           </li>
           <li>
-            <Link to="/models" className="main-nav-ul-text">
+            <Link
+              to="/models"
+              className="main-nav-ul-text"
+              onClick={handleLink}
+            >
               Vehicle Models
             </Link>
           </li>
           <li>
-            <Link to="/testimonials" className="main-nav-ul-text">
+            <Link
+              to="/testimonials"
+              className="main-nav-ul-text"
+              onClick={handleLink}
+            >
               Testimonials
             </Link>
           </li>
           <li>
-            <Link to="/team" className="main-nav-ul-text">
+            <Link to="/team" className="main-nav-ul-text" onClick={handleLink}>
               Our Team
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="main-nav-ul-text">
+            <Link
+              to="/contact"
+              className="main-nav-ul-text"
+              onClick={handleLink}
+            >
               Contact
             </Link>
           </li>
