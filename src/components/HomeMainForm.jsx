@@ -2,11 +2,18 @@ import { useForm } from "react-hook-form";
 import Button from "./Button";
 import ErrorForm from "./ErrorForm";
 import toast from "react-hot-toast";
+import { useOutsideClick } from "../hooks/useOutsideClick";
 
 function HomeMainForm({ setModal }) {
   const { register, handleSubmit, reset, getValues, formState } = useForm();
 
   const { errors } = formState;
+
+  function close() {
+    setModal(modal => !modal);
+  }
+
+  const ref = useOutsideClick(close);
 
   function handleClick() {
     toast("Check your email");
@@ -23,7 +30,7 @@ function HomeMainForm({ setModal }) {
   }
 
   return (
-    <div className="modal-form">
+    <div className="modal-form" ref={ref}>
       <h3>Personal Information</h3>
       <form
         className="modal-form-info"
