@@ -1,17 +1,24 @@
 import { useState } from "react";
 import useFetchCars from "../services/fetchCars";
 import Button from "./Button";
+import { useSearchParams } from "react-router-dom";
 
 function CarModels() {
+  const [searchParams] = useSearchParams();
   const [cars, setCars] = useState([]);
 
   useFetchCars(setCars);
-  console.log(cars);
+
+  const sortBy = searchParams.get("sortBy") || "price-asc";
+
+  const [field, direction] = sortBy.split("-");
+  const modifier = direction === "asc" ? 1 : -1;
+  const sortedCars = cars.sort((a, b) => (a[field] - b[field]) * modifier);
 
   return (
     <div className="models-container">
       <div className="models-container-flex">
-        {cars.map((car, i) => (
+        {sortedCars.map((car, i) => (
           <ModelsKid car={car} key={i} />
         ))}
       </div>

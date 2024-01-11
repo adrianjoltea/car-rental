@@ -1,0 +1,14 @@
+@import "../base/colors";
+.sort-container {
+  max-width: 133rem;
+  margin: 0 auto;
+  margin-top: 10rem;
+  select {
+    padding: 1rem;
+    font-size: 1.4rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: $slate-100;
+    border: 1px solid $gray-100;
+  }
+}

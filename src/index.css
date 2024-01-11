@@ -1175,7 +1175,7 @@ body {
         justify-content: center; } }
 
 .model-car {
-  margin-top: 10rem;
+  margin-top: 2rem;
   width: 35rem;
   display: flex;
   flex-direction: column;
@@ -1321,6 +1321,18 @@ body {
   .submit-email:hover {
     box-shadow: 0 10px 15px 0 #ff5330;
     background-color: #fa4226; }
+
+.sort-container {
+  max-width: 133rem;
+  margin: 0 auto;
+  margin-top: 10rem; }
+  .sort-container select {
+    padding: 1rem;
+    font-size: 1.4rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #f1f5f9;
+    border: 1px solid #f3f4f6; }
 
 .main-btn {
   padding: 2rem;
