@@ -11,7 +11,6 @@ function HomePickSection() {
   }
 
   useFetchCars(setCars);
-  console.log(cars);
 
   const currentCar = cars[currectCarIndex] || {};
 
