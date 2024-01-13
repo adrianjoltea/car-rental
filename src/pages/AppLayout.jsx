@@ -3,6 +3,7 @@ import { FaCarSide } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useEffect, useRef, useState } from "react";
+import Logout from "../components/Logout";
 
 function AppLayout() {
   const [navOpen, setNavOpen] = useState(false);
@@ -118,6 +119,7 @@ function AppLayout() {
               Contact
             </Link>
           </li>
+          <Logout />
         </ul>
       </nav>
 
