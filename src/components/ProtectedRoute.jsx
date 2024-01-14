@@ -7,12 +7,12 @@ function ProtectedRoute({ children }) {
   const navigate = useNavigate();
   const { isLoading, isAuthenticated } = useUser();
 
-  //   useEffect(
-  //     function () {
-  //       if (!isAuthenticated && !isLoading) navigate("/login");
-  //     },
-  //     [isAuthenticated, isLoading, navigate]
-  //   );
+  useEffect(
+    function () {
+      if (!isAuthenticated && !isLoading) navigate("/login");
+    },
+    [isAuthenticated, isLoading, navigate]
+  );
 
   if (!isAuthenticated && !isLoading) navigate("/login");
 
