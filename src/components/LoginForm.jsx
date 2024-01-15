@@ -6,8 +6,8 @@ import toast from "react-hot-toast";
 import { useLogin } from "../services/useLogin";
 
 function LoginForm() {
-  const [email, setEmail] = useState("joltea@example.com");
-  const [password, setPassword] = useState("123456789");
+  const [email, setEmail] = useState(import.meta.env.VITE_USER_NAME);
+  const [password, setPassword] = useState(import.meta.env.VITE_USER_PASS);
   const { login, isLoading } = useLogin();
 
   function handleSubmit(e) {
