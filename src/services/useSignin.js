@@ -12,6 +12,9 @@ export function useSignIn() {
     onSuccess: user => {
       queryClient.setQueryData(["user"], user.user);
       navigate("/");
+      toast.success(
+        "Account succesfully created! Please verify the new account from the user s email address"
+      );
     },
     onError: error => {
       toast.error(error.message);
