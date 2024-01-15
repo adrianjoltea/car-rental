@@ -19,11 +19,10 @@ function SignupForm() {
       setCurrentPassword("");
       return;
     }
-    console.log(checkPassword("aA123!aa@#$1234"));
-    console.log(password);
+
     if (!checkPassword(password)) {
       toast.error(
-        "The passoword should contain atleast one Capitalized letter, one number and one special character(@.#$!%*?&^)"
+        "The password should contain at least one capitalized letter, one number, and one special character (@.#$!%*?&^)"
       );
       return;
     }

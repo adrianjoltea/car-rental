@@ -7,13 +7,17 @@ function LogIn() {
   return (
     <div className="login-container">
       <div>
-        <h2>Log in to your account</h2>
+        <h2>{signIn ? "Sign in" : "Log in"} to your account</h2>
         {signIn ? <SignupForm /> : <LoginForm />}
-        {/* <SignupForm /> */}
-        {/* <LoginForm /> */}
-        <button onClick={() => setSignin(oposite => !oposite)}>
-          {signIn ? "Log in" : "Sign in"}
-        </button>
+        <div className="login-container-text">
+          <p>{signIn ? "Already a user" : "Create an account"}</p>
+          <button
+            className="login-container-button main-btn btn-color-orange"
+            onClick={() => setSignin(oposite => !oposite)}
+          >
+            {signIn ? "Log in" : "Sign in"}
+          </button>
+        </div>
       </div>
     </div>
   );
