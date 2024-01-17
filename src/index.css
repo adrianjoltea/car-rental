@@ -119,6 +119,81 @@ body {
       padding-block: 1rem;
       z-index: 10; } }
 
+.section-hero {
+  background-color: #f9fafb;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; }
+  @media (max-width: 1000px) {
+    .section-hero {
+      align-items: center;
+      justify-content: center; } }
+  .section-hero-container {
+    padding: 5rem;
+    display: flex; }
+    @media (max-width: 1000px) {
+      .section-hero-container {
+        align-items: center;
+        justify-content: center; } }
+    .section-hero-container-text {
+      margin-top: 5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      width: 45rem; }
+      @media (max-width: 1000px) {
+        .section-hero-container-text {
+          align-items: center;
+          text-align: center;
+          width: 100%; } }
+      .section-hero-container-text-buttons {
+        display: flex;
+        gap: 3rem; }
+        @media (max-width: 1000px) {
+          .section-hero-container-text-buttons {
+            display: grid;
+            margin-top: 10rem; } }
+      .section-hero-container-text h1 {
+        font-size: 5rem; }
+      .section-hero-container-text p {
+        font-size: 1.5rem;
+        color: #9ca3af; }
+      .section-hero-container-text span {
+        color: #f97316; }
+      .section-hero-container-text h3 {
+        font-size: 2rem; }
+    .section-hero-container-image {
+      position: relative;
+      width: 60rem;
+      transition: all 1s; }
+      @media (max-width: 1400px) {
+        .section-hero-container-image {
+          width: 50rem; } }
+      @media (max-width: 1000px) {
+        .section-hero-container-image {
+          display: none; } }
+      .section-hero-container-image-car {
+        width: 140%;
+        position: absolute;
+        transition: all 1s; }
+        @media (max-width: 1500px) {
+          .section-hero-container-image-car {
+            width: 100%;
+            bottom: 0; } }
+
+.absolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  transition: all 1s; }
+  @media (max-width: 1300px) {
+    .absolute {
+      right: -25rem; } }
+  @media (max-width: 1000px) {
+    .absolute {
+      display: none; } }
+
 .form-body {
   margin-block: 20rem; }
   .form-body-container {
@@ -802,81 +877,6 @@ body {
   @media (max-width: 1000px) {
     .error-form {
       font-size: 3rem; } }
-
-.section-hero {
-  background-color: #f9fafb;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center; }
-  @media (max-width: 1000px) {
-    .section-hero {
-      align-items: center;
-      justify-content: center; } }
-  .section-hero-container {
-    padding: 5rem;
-    display: flex; }
-    @media (max-width: 1000px) {
-      .section-hero-container {
-        align-items: center;
-        justify-content: center; } }
-    .section-hero-container-text {
-      margin-top: 5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
-      width: 45rem; }
-      @media (max-width: 1000px) {
-        .section-hero-container-text {
-          align-items: center;
-          text-align: center;
-          width: 100%; } }
-      .section-hero-container-text-buttons {
-        display: flex;
-        gap: 3rem; }
-        @media (max-width: 1000px) {
-          .section-hero-container-text-buttons {
-            display: grid;
-            margin-top: 10rem; } }
-      .section-hero-container-text h1 {
-        font-size: 5rem; }
-      .section-hero-container-text p {
-        font-size: 1.5rem;
-        color: #9ca3af; }
-      .section-hero-container-text span {
-        color: #f97316; }
-      .section-hero-container-text h3 {
-        font-size: 2rem; }
-    .section-hero-container-image {
-      position: relative;
-      width: 60rem;
-      transition: all 1s; }
-      @media (max-width: 1400px) {
-        .section-hero-container-image {
-          width: 50rem; } }
-      @media (max-width: 1000px) {
-        .section-hero-container-image {
-          display: none; } }
-      .section-hero-container-image-car {
-        width: 140%;
-        position: absolute;
-        transition: all 1s; }
-        @media (max-width: 1500px) {
-          .section-hero-container-image-car {
-            width: 100%;
-            bottom: 0; } }
-
-.absolute {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 0;
-  transition: all 1s; }
-  @media (max-width: 1300px) {
-    .absolute {
-      right: -25rem; } }
-  @media (max-width: 1000px) {
-    .absolute {
-      display: none; } }
 
 .main-btn {
   padding: 2rem;
