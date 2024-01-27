@@ -3,11 +3,16 @@ import Button from "./Button";
 import ErrorForm from "./ErrorForm";
 import toast from "react-hot-toast";
 import { useOutsideClick } from "../hooks/useOutsideClick";
+import { useEffect } from "react";
 
-function HomeMainForm({ setModal }) {
+function HomeMainForm({ setModal, modal }) {
   const { register, handleSubmit, reset, getValues, formState } = useForm();
 
   const { errors } = formState;
+
+  useEffect(() => {
+    if (!modal) document.body.style.overflow = "unset";
+  }, [modal]);
 
   function close() {
     setModal(modal => !modal);

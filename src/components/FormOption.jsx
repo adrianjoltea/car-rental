@@ -1,5 +1,5 @@
-function FormOption({ carName, key: keyId }) {
-  return <option key={keyId}>{carName}</option>;
+function FormOption({ carName }) {
+  return <option>{carName}</option>;
 }
 
 export default FormOption;

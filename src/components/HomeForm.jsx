@@ -195,7 +195,7 @@ function HomeForm() {
             <img src={currectCar?.image} />
           </div>
         </div>
-        <HomeMainForm setModal={setModal} />
+        <HomeMainForm setModal={setModal} modal={modal} />
       </Modal>
     </>
   );
