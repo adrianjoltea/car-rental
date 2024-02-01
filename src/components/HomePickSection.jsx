@@ -1,18 +1,16 @@
 import { useState } from "react";
-import useFetchCars from "../services/fetchCars";
+import { useCars } from "../services/fetchCars";
 import Title from "./Title";
 
 function HomePickSection() {
-  const [cars, setCars] = useState([]);
   const [currectCarIndex, setCurrentCarIndex] = useState(1);
 
   function handleClick(index) {
     setCurrentCarIndex(index);
   }
+  const { error, carData, isLoading } = useCars();
 
-  useFetchCars(setCars);
-
-  const currentCar = cars[currectCarIndex] || {};
+  const currentCar = carData[currectCarIndex] || {};
 
   return (
     <div>
@@ -26,7 +24,7 @@ function HomePickSection() {
       </Title>
       <section className="pick-section-container">
         <div className="pick-section-container-cars">
-          {cars.map((car, i) => (
+          {carData.map((car, i) => (
             <span
               className={`pick-section-container-cars-car ${
                 i === currectCarIndex ? "active" : ""

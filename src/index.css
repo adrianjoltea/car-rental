@@ -1876,6 +1876,26 @@ body {
       padding: 1rem 1.4rem;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; }
 
+.error-page {
+  margin-block: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .error-page-container {
+    width: 50%;
+    height: 30rem;
+    background-color: #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-size: 3rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .error-page-container-warning {
+      font-size: 5rem;
+      color: #991b1b; }
+
 .button-icon {
   background: none;
   border: none;

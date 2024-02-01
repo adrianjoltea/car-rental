@@ -1,14 +1,18 @@
-import { useState } from "react";
-import useFetchPeople from "../services/fetchPeople";
+import { usePeople } from "../services/fetchPeople";
+import ErrorPage from "./ErrorPage";
+import Spinner from "./Spinner";
 
 function TeamPeople() {
-  const [team, setTeam] = useState([]);
-  useFetchPeople(setTeam);
-  console.log(team);
+  const { dataPeople, isLoading, error } = usePeople();
+  console.log(dataPeople);
+
+  if (isLoading) return <Spinner />;
+
+  if (error) return <ErrorPage />;
 
   return (
     <div className="team">
-      {team.map(person => (
+      {dataPeople.map(person => (
         <Person
           img={person.img}
           name={person.name}

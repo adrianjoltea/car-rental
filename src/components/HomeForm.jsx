@@ -8,17 +8,16 @@ import { useState } from "react";
 import Modal from "react-modal";
 import ErrorForm from "./ErrorForm";
 import HomeMainForm from "./HomeMainForm";
-import useFetchCars from "../services/fetchCars";
+import { useCars } from "../services/fetchCars";
 
 function HomeForm() {
   const { register, handleSubmit, reset, getValues, formState } = useForm();
 
-  const [cars, setCars] = useState([]);
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [modal, setModal] = useState(false);
 
-  useFetchCars(setCars);
+  const { error, carData, isLoading } = useCars();
 
   const { errors } = formState;
 
@@ -36,7 +35,7 @@ function HomeForm() {
     console.error(error);
   }
 
-  const currectCar = cars.find(car => car.name === getValues().carType);
+  const currectCar = carData.find(car => car.name === getValues().carType);
 
   return (
     <>
@@ -62,7 +61,7 @@ function HomeForm() {
                 })}
               >
                 <option></option>
-                {cars.map(car => (
+                {carData.map(car => (
                   <FormOption carName={car.name} key={car.id} />
                 ))}
               </select>

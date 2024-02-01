@@ -1,19 +1,23 @@
-import { useState } from "react";
-import useFetchCars from "../services/fetchCars";
+import { useCars } from "../services/fetchCars";
 import Button from "./Button";
 import { useSearchParams } from "react-router-dom";
+import Spinner from "./Spinner";
+import ErrorPage from "./ErrorPage";
 
 function CarModels() {
   const [searchParams] = useSearchParams();
-  const [cars, setCars] = useState([]);
 
-  useFetchCars(setCars);
+  const { error, carData, isLoading } = useCars();
+
+  if (error) return <ErrorPage />;
+
+  if (isLoading) return <Spinner />;
 
   const sortBy = searchParams.get("sortBy") || "price-asc";
 
   const [field, direction] = sortBy.split("-");
   const modifier = direction === "asc" ? 1 : -1;
-  const sortedCars = cars.sort((a, b) => (a[field] - b[field]) * modifier);
+  const sortedCars = carData.sort((a, b) => (a[field] - b[field]) * modifier);
 
   return (
     <div className="models-container">

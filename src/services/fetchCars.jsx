@@ -1,19 +1,14 @@
-import { useEffect } from "react";
 import { getCars } from "./apiCars";
+import { useQuery } from "@tanstack/react-query";
 
-function useFetchCars(updateData) {
-  useEffect(() => {
-    async function fetchCars() {
-      try {
-        const res = await getCars();
-        updateData(res);
-      } catch (err) {
-        console.error(err);
-      }
-    }
+export function useCars() {
+  const { error, data, isLoading } = useQuery({
+    queryKey: ["cars"],
+    queryFn: getCars,
+  });
 
-    fetchCars();
-  }, [updateData]);
+  console.log(error);
+  const carData = data || [];
+
+  return { error, carData, isLoading };
 }
-
-export default useFetchCars;

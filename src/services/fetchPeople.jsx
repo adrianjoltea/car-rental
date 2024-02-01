@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { getPeople } from "./apiPeople";
+import { useQuery } from "@tanstack/react-query";
 
 function useFetchPeople(updateData) {
   useEffect(() => {
@@ -16,3 +17,18 @@ function useFetchPeople(updateData) {
 }
 
 export default useFetchPeople;
+
+export function usePeople() {
+  const {
+    error,
+    data: dataPeopleRaw,
+    isLoading,
+  } = useQuery({
+    queryKey: ["people"],
+    queryFn: getPeople,
+  });
+
+  const dataPeople = dataPeopleRaw || [];
+
+  return { error, dataPeople, isLoading };
+}
