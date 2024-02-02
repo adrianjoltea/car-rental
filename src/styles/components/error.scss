@@ -11,9 +11,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     gap: 3rem;
     font-size: 3rem;
+    padding: 3rem;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    @media (max-width: 1000px) {
+      width: 75%;
+
+      font-size: 2rem;
+    }
     &-warning {
       font-size: 5rem;
       color: $red-800;

@@ -72,7 +72,7 @@ function AppLayout() {
     // </div>
     <>
       <nav className="main-nav">
-        <label className="main-nav-logo">Car Rental</label>
+        <label className="main-nav-logo">RentNZoom</label>
         <a href="#" onClick={handleShow} className="toggle-mobile">
           {navOpen ? "X" : <GiHamburgerMenu />}
         </a>
